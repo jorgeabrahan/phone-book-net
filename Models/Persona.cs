@@ -10,6 +10,8 @@ public class Persona
   public Sexos Sexo { get; set; }
   public EstadosCiviles EstadoCivil { get; set; }
   public string? Correo { get; set; }
+
+  public virtual ICollection<Telefono>? Telefonos { get; set; }
 }
 
 public enum Sexos

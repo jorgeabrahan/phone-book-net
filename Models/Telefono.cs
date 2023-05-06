@@ -8,4 +8,5 @@ public class Telefono
   public string Numero { get; set; } = "";
 
   public virtual CodigoArea? CodigoArea { get; set; }
+  public virtual Persona? Persona { get; set; }
 }
