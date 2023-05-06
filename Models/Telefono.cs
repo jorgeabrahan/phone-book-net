@@ -6,4 +6,6 @@ public class Telefono
   public Guid CodigoAreaId { get; set; }
   public Guid PersonaId { get; set; }
   public string Numero { get; set; } = "";
+
+  public virtual CodigoArea? CodigoArea { get; set; }
 }
