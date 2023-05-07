@@ -17,7 +17,7 @@ public class Persona
 
   [MaxLength(100)]
   public string? Alias { get; set; }
-  public DateOnly FechaNacimiento { get; set; }
+  public DateTime FechaNacimiento { get; set; }
 
   [NotMapped]
   public int Edad { get; set; }
