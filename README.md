@@ -2,6 +2,10 @@
 
 PhoneBook webapp built in using Microsoft Entity Framework in C#
 
+## References
+
+PhoneBook UML Diagram Link: [https://app.genmymodel.com/api/repository/jorgeabrahan/phone%20book](https://app.genmymodel.com/api/repository/jorgeabrahan/phone%20book)
+
 ## Prerequisites
 
 - SDK .Net 7 Installed
