@@ -54,4 +54,13 @@ app.MapPost("/api/codigoarea", async ([FromServices] PhoneBookContext context, [
   return Results.Ok(codigoArea.CodigoAreaId);
 });
 
+// endpoint to post a phone
+app.MapPost("/api/telefono", async ([FromServices] PhoneBookContext context, [FromBody] Telefono telefono) =>
+{
+  telefono.TelefonoId = Guid.NewGuid();
+  await context.AddAsync(telefono);
+  await context.SaveChangesAsync();
+  return Results.Ok(telefono.TelefonoId);
+});
+
 app.Run();
