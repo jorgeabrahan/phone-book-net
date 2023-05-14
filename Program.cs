@@ -22,4 +22,10 @@ app.MapGet("/api/personas", ([FromServices] PhoneBookContext context) =>
   return Results.Ok(context.Personas);
 });
 
+// endpoint to get all area codes
+app.MapGet("/api/codigosarea", ([FromServices] PhoneBookContext context) =>
+{
+  return Results.Ok(context.CodigoAreas);
+});
+
 app.Run();
