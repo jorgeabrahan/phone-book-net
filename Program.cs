@@ -45,4 +45,13 @@ app.MapPost("/api/persona", async ([FromServices] PhoneBookContext context, [Fro
   return Results.Ok(persona.PersonaId);
 });
 
+// endpoint to post an area code
+app.MapPost("/api/codigoarea", async ([FromServices] PhoneBookContext context, [FromBody] CodigoArea codigoArea) =>
+{
+  codigoArea.CodigoAreaId = Guid.NewGuid();
+  await context.AddAsync(codigoArea);
+  await context.SaveChangesAsync();
+  return Results.Ok(codigoArea.CodigoAreaId);
+});
+
 app.Run();
