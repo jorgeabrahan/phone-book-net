@@ -14,4 +14,12 @@ app.MapGet("/connect", ([FromServices] PhoneBookContext context) =>
   return Results.Ok("Base de datos en linea!");
 });
 
+/* GET ENDPOINTS */
+
+// endpoint to get all persons
+app.MapGet("/api/personas", ([FromServices] PhoneBookContext context) =>
+{
+  return Results.Ok(context.Personas);
+});
+
 app.Run();
