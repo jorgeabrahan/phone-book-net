@@ -28,4 +28,10 @@ app.MapGet("/api/codigosarea", ([FromServices] PhoneBookContext context) =>
   return Results.Ok(context.CodigoAreas);
 });
 
+// endpoint to get all phones
+app.MapGet("/api/telefonos", ([FromServices] PhoneBookContext context) =>
+{
+  return Results.Ok(context.Telefonos);
+});
+
 app.Run();
