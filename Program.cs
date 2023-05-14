@@ -34,4 +34,15 @@ app.MapGet("/api/telefonos", ([FromServices] PhoneBookContext context) =>
   return Results.Ok(context.Telefonos);
 });
 
+/* POST ENDPOINTS */
+
+// enpoint to post a person
+app.MapPost("/api/persona", async ([FromServices] PhoneBookContext context, [FromBody] Persona persona) =>
+{
+  persona.PersonaId = Guid.NewGuid();
+  await context.AddAsync(persona);
+  await context.SaveChangesAsync();
+  return Results.Ok(persona.PersonaId);
+});
+
 app.Run();
